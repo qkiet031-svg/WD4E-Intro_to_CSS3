@@ -1,0 +1,120 @@
+/* style.css - Bài tập về nhà 2 - dùng chung cho cả 3 trang HTML */
+
+/* Thẻ nội dung (body) */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #222222;
+  margin: 0;
+}
+
+/* Liên kết "Skip to Main Content": ẩn khỏi màn hình, hiện ra khi nhấn Tab */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 15px;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+
+header {
+  background-color: #d6e4f5;
+  padding: 20px;
+}
+
+/* Bước 4: nav dùng khối nội tuyến, chiều rộng khoảng 80% */
+nav {
+  background-color: #1f3a5f;
+  display: inline-block;
+  width: 80%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+/* Bước 5: bộ chọn hậu duệ - chỉ ảnh nằm trong nav, rộng khoảng 10% */
+nav img {
+  width: 10%;
+  vertical-align: middle;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+main {
+  background-color: #f7f7f2;
+  font-size: 20px;
+  padding: 20px;
+}
+
+footer {
+  background-color: #1f3a5f;
+  color: #ffffff;
+  padding: 15px 20px;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+/* Bước 3: nhận xét (vô hiệu hóa) kiểu dáng cũ của phần tử li
+li {
+  display: inline-block;
+  width: 220px;
+}
+*/
+
+h1 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #12304f;
+}
+
+p {
+  line-height: 1.8;
+}
+
+/* Bước 6 + 8: lớp grid - lưới 2 cột, mỗi cột khoảng 40% */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 20px;
+}
+
+/* Bước 7: bộ chọn hậu duệ - ảnh trong lớp grid rộng 100% (không ảnh hưởng ảnh trong .flex) */
+.grid img {
+  width: 100%;
+}
+
+/* Bước 9: lớp flex */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
